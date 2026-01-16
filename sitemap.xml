@@ -4,7 +4,7 @@
   <!-- Página Principal - SEC SISTEMAS -->
   <url>
     <loc>https://secsistemas.com.br/</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- Exemplo: Clínica de Estética -->
   <url>
     <loc>https://secsistemas.com.br/front/front%20estetica/html/index.html</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,7 +20,7 @@
   <!-- Exemplo: Restaurante -->
   <url>
     <loc>https://secsistemas.com.br/front/front%20comercio%20de%20comida/html/index.html</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
