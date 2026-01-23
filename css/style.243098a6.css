@@ -456,7 +456,7 @@ img {
     font-size: 1.25rem;
     color: var(--dark-2) !important;
     margin-bottom: var(--spacing-xl);
-    max-width: 600px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
