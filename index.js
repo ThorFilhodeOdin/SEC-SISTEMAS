@@ -1,60 +1,87 @@
 // SEC SISTEMAS - JavaScript Principal
 
 // ============================================
-// MATRIX EFFECT
+// MATRIX EFFECT - OTIMIZADO PARA PERFORMANCE
 // ============================================
 const canvas = document.getElementById('matrixCanvas');
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext('2d', { alpha: false }); // Otimização: desabilitar alpha
+
+// Detectar dispositivo móvel
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 // Configurar tamanho do canvas
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-// Caracteres do Matrix (binário + símbolos)
-const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-const fontSize = 14;
-const columns = canvas.width / fontSize;
-
-// Array de gotas
-const drops = [];
-for (let i = 0; i < columns; i++) {
-    drops[i] = Math.random() * -100;
-}
-
-// Função de desenho
-function drawMatrix() {
-    // Fundo semi-transparente para efeito de trilha
-    ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    // Cor verde do Matrix
-    ctx.fillStyle = '#0f9';
-    ctx.font = fontSize + 'px monospace';
-
-    // Desenhar caracteres
-    for (let i = 0; i < drops.length; i++) {
-        const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
-        const x = i * fontSize;
-        const y = drops[i] * fontSize;
-
-        ctx.fillText(text, x, y);
-
-        // Resetar gota quando chega ao fim ou aleatoriamente
-        if (y > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0;
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    // Recalcular colunas após resize
+    const columns = Math.floor(canvas.width / fontSize);
+    drops.length = columns;
+    for (let i = 0; i < columns; i++) {
+        if (drops[i] === undefined) {
+            drops[i] = Math.random() * -100;
         }
-
-        drops[i]++;
     }
 }
 
-// Animar Matrix
-setInterval(drawMatrix, 35);
+// Caracteres do Matrix (reduzido para performance)
+const matrixChars = '01アイウエオカキクケコサシスセソタチツテト';
+const fontSize = isMobile ? 16 : 14; // Fonte maior em mobile = menos colunas
+const drops = [];
 
-// Redimensionar canvas quando janela muda
+resizeCanvas();
+
+// Variáveis de controle de FPS
+let lastFrameTime = 0;
+const targetFPS = isMobile ? 20 : 30; // FPS reduzido em mobile
+const frameInterval = 1000 / targetFPS;
+
+// Função de desenho otimizada
+function drawMatrix(currentTime) {
+    // Throttle para controlar FPS
+    const elapsed = currentTime - lastFrameTime;
+    
+    if (elapsed > frameInterval) {
+        lastFrameTime = currentTime - (elapsed % frameInterval);
+        
+        // Fundo semi-transparente para efeito de trilha
+        ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Cor verde do Matrix
+        ctx.fillStyle = '#0f9';
+        ctx.font = fontSize + 'px monospace';
+
+        // Desenhar caracteres (otimizado)
+        const columns = Math.floor(canvas.width / fontSize);
+        for (let i = 0; i < columns; i++) {
+            const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+            const x = i * fontSize;
+            const y = drops[i] * fontSize;
+
+            ctx.fillText(text, x, y);
+
+            // Resetar gota quando chega ao fim ou aleatoriamente
+            if (y > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+
+            drops[i]++;
+        }
+    }
+    
+    // Continuar animação
+    requestAnimationFrame(drawMatrix);
+}
+
+// Iniciar animação com requestAnimationFrame (mais eficiente)
+requestAnimationFrame(drawMatrix);
+
+// Redimensionar canvas quando janela muda (com debounce)
+let resizeTimeout;
 window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(resizeCanvas, 250);
 });
 
 // ============================================
