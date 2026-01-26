@@ -1797,10 +1797,9 @@ img {
     }
 }
 
-/* Otimizar canvas em telas pequenas */
+/* Desabilitar canvas em telas pequenas (mobile) */
 @media (max-width: 768px) {
     .matrix-canvas {
-        opacity: 0.2;
-        filter: blur(2px);
+        display: none !important;
     }
 }
