@@ -1,4 +1,4 @@
-﻿:root {
+:root {
 
     --primary: #06b6d4;
     --primary-dark: #0891b2;
@@ -66,18 +66,23 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     background-color: #0a0a0a;
-
 }
 
 body {
     font-family: var(--font-primary);
     color: var(--dark);
     background: transparent;
-
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+}
+
+/* Ajuste automático para computadores, notebooks e TVs (escala de 90%) */
+@media (min-width: 992px) {
+    body {
+        zoom: 0.9;
+    }
 }
 
 h1,
@@ -416,8 +421,8 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     opacity: 0.35;
     filter: blur(1px);
     z-index: -1;

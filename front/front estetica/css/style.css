@@ -1,4 +1,4 @@
-﻿:root {
+:root {
 
     --gold: #FFB347;
     --gold-light: #FFD580;
@@ -90,6 +90,13 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ajuste automático para computadores, notebooks e TVs (escala de 90%) */
+@media (min-width: 992px) {
+    body {
+        zoom: 0.9;
+    }
 }
 
 

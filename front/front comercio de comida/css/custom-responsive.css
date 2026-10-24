@@ -1,4 +1,11 @@
-﻿
+
+/* Ajuste automático para computadores, notebooks e TVs (escala de 90%) */
+@media (min-width: 992px) {
+    body {
+        zoom: 0.9;
+    }
+}
+
 #header,
 #header *,
 #header-container,
