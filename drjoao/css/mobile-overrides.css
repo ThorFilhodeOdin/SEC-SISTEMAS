@@ -1,0 +1,211 @@
+﻿
+
+
+@media (max-width: 768px) {
+
+    
+    .hero-content[style*="text-align: center"] {
+        max-width: 100% !important;
+        padding: 0 var(--spacing-sm);
+    }
+
+    
+    div[style*="max-width"] {
+        max-width: 100% !important;
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+    }
+
+    
+    div[style*="display: flex"][style*="justify-content: center"] {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    a.card[style*="min-width: 200px"] {
+        min-width: 100% !important;
+        max-width: 300px;
+    }
+
+    
+    div[style*="display: flex"][style*="gap"] {
+        flex-direction: column !important;
+        width: 100%;
+    }
+
+    div[style*="display: flex"][style*="gap"] .btn {
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    
+    div[style*="font-size: 3rem"] {
+        font-size: 2.5rem !important;
+    }
+
+    
+    div[style*="width: 60px"][style*="height: 60px"] {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.5rem !important;
+    }
+
+    
+    iframe[src*="google.com/maps"] {
+        height: 300px !important;
+    }
+
+    
+    img[style*="border-radius"] {
+        border-radius: var(--radius-md) !important;
+    }
+
+    
+    
+    .hero[style*="min-height"],
+    .hero {
+        min-height: auto !important;
+        padding-top: 80px !important;
+        
+        padding-bottom: var(--spacing-xl) !important;
+        text-align: center !important;
+    }
+
+    
+    .hero-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .hero-content {
+        display: contents !important;
+        
+    }
+
+    .hero-content h1 {
+        order: 1;
+        margin-bottom: 0px !important;
+        margin-top: 0 !important;
+        text-align: center !important;
+    }
+
+    .hero-content .hero-subtitle {
+        order: 2;
+        margin-top: 0 !important;
+        
+        margin-bottom: 25px !important;
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .hero-image {
+        order: 3 !important;
+        margin: 0 0 30px 0 !important;
+        width: 100% !important;
+        transform: none !important;
+    }
+
+    .hero-content .hero-cta {
+        order: 4 !important;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+
+    
+    .hero[style*="min-height: 60vh"],
+    .hero[style*="min-height: 50vh"] {
+        min-height: auto !important;
+        padding-top: 80px !important;
+        padding-bottom: var(--spacing-lg) !important;
+    }
+
+    
+    iframe[src*="google.com/maps"] {
+        height: 250px !important;
+    }
+
+    
+    div[style*="font-size: 3rem"] {
+        font-size: 2rem !important;
+        margin-bottom: var(--spacing-xs) !important;
+    }
+
+    
+    div[style*="width: 60px"][style*="height: 60px"],
+    div[style*="width: 50px"][style*="height: 50px"] {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.3rem !important;
+    }
+
+    
+    h3.card-title[style*="font-size: 1.2rem"] {
+        font-size: 1.1rem !important;
+    }
+
+    
+    ul[style*="list-style: none"] li {
+        font-size: 0.85rem !important;
+        margin-bottom: 4px !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    
+    .card[style*="animation-delay"] {
+        animation-delay: 0s !important;
+    }
+
+    
+    svg[width="32"][height="32"] {
+        width: 28px !important;
+        height: 28px !important;
+    }
+}
+
+@media (max-width: 576px) {
+
+    
+    svg[width="32"][height="32"] {
+        width: 26px !important;
+        height: 26px !important;
+    }
+}
+
+
+
+
+#mainHeader {
+    border-bottom: none !important;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4) !important;
+}
+
+#mainHeader.scrolled {
+    box-shadow: 0 5px 20px rgba(74, 144, 226, 0.6) !important;
+}
+
+
+.footer {
+    border-top: 3px solid #4A90E2 !important;
+}

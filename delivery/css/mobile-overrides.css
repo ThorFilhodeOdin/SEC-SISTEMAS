@@ -1,0 +1,281 @@
+﻿
+
+@media (max-width: 768px) {
+
+    
+    body,
+    html {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    .container,
+    .row,
+    .columns {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    
+    .one.column,
+    .one.columns,
+    .two.columns,
+    .three.columns,
+    .four.columns,
+    .five.columns,
+    .six.columns,
+    .seven.columns,
+    .eight.columns,
+    .nine.columns,
+    .ten.columns,
+    .eleven.columns,
+    .twelve.columns,
+    .one-third.column,
+    .two-thirds.column,
+    .one-half.column {
+        width: 100% !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 30px !important;
+        display: block !important;
+        clear: both !important;
+    }
+
+    
+    p {
+        font-size: 16px !important;
+        line-height: 1.8 !important;
+        width: 100% !important;
+        text-align: justify !important;
+        
+        padding: 0 5px !important;
+    }
+
+    
+    h3,
+    h4 {
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    
+    .columns img:not(.social-icon):not([style*="height: 50px"]),
+    img.scale-with-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 auto 20px auto !important;
+        display: block !important;
+        float: none !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+        
+        border-radius: 8px !important;
+    }
+
+    iframe {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+        
+        border-radius: 8px !important;
+    }
+
+    
+    .contact-info img,
+    a[href*="whatsapp"] img,
+    a[href*="ifood"] img {
+        width: auto !important;
+        max-width: 50px !important;
+        
+        height: 50px !important;
+        display: inline-block !important;
+        margin: 0 10px 10px 0 !important;
+    }
+
+    
+    .row {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    
+    .row[style*="justify-content: center"] {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+    }
+
+    
+    .slider-container {
+        height: 60vh !important;
+        
+    }
+
+    .slide-content h1 {
+        font-size: 24px !important;
+        
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6) !important;
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    .slide-content p {
+        font-size: 14px !important;
+        padding: 0 20px !important;
+    }
+
+    
+    body .ifood-float {
+        display: flex !important;
+        width: 60px !important;
+        height: 60px !important;
+        min-width: 60px !important;
+        min-height: 60px !important;
+        border-radius: 50% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        background: none !important;
+        box-shadow: none !important;
+        animation: none !important;
+        
+        transform: none !important;
+    }
+
+    body .ifood-float img {
+        width: 60px !important;
+        height: 60px !important;
+        min-width: 60px !important;
+        min-height: 60px !important;
+        max-width: 60px !important;
+        max-height: 60px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        border: none !important;
+    }
+
+    
+    .section-padding {
+        padding: 40px 0 !important;
+    }
+
+    h2 {
+        font-size: 28px !important;
+        margin-bottom: 20px !important;
+    }
+
+    
+    .mobile-toggle {
+        display: block !important;
+    }
+
+    
+    .footer {
+        padding: 30px 15px !important;
+        text-align: center !important;
+        border-top: 3px solid #be1c22 !important;
+        
+    }
+
+    
+    .btn {
+        width: 100% !important;
+        margin: 20px auto 30px auto !important;
+        
+        display: block !important;
+        text-align: center !important;
+        position: relative;
+        overflow: hidden;
+        animation: btn-pulse 2s infinite;
+    }
+
+    @keyframes btn-pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(190, 28, 34, 0.7);
+        }
+
+        70% {
+            transform: scale(1.02);
+            box-shadow: 0 0 0 10px rgba(190, 28, 34, 0);
+        }
+
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(190, 28, 34, 0);
+        }
+    }
+
+    
+
+    
+    .service-icon {
+        font-size: 40px !important;
+        margin-bottom: 15px !important;
+    }
+
+    
+    .nav-menu {
+        padding: 10px 0 !important;
+    }
+
+    .nav-menu li {
+        margin-bottom: 5px !important;
+    }
+
+    .nav-menu a {
+        font-size: 14px !important;
+        
+        padding: 8px 0 !important;
+    }
+
+
+    
+    .menu-parallax h2 {
+        font-size: 24px !important;
+        
+        line-height: 1.2 !important;
+        padding: 0 15px !important;
+        white-space: normal !important;
+        
+        word-wrap: break-word !important;
+    }
+
+    .menu-parallax p {
+        font-size: 13px !important;
+        padding: 0 20px !important;
+        max-width: 90% !important;
+        margin: 0 auto !important;
+    }
+
+    
+    .ifood-float,
+    .ifood-float img {
+        border-radius: 50% !important;
+        overflow: hidden !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    div[style*="width"] {
+        width: 100% !important;
+    }
+
+    table,
+    tbody,
+    tr,
+    td {
+        display: block !important;
+        width: 100% !important;
+    }
+}

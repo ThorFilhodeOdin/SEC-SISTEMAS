@@ -1,0 +1,91 @@
+﻿
+
+:root {
+    
+    --gold: #4A90E2;
+    --gold-light: #6BA3E8;
+    --gold-dark: #357ABD;
+    --gold-vibrant: #2E7DD2;
+}
+
+
+.btn-primary {
+    background: linear-gradient(135deg, #2E7DD2 0%, #4A90E2 100%) !important;
+    color: var(--white);
+    box-shadow: 0 6px 20px rgba(46, 125, 210, 0.35);
+    font-weight: var(--weight-bold);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(46, 125, 210, 0.5);
+}
+
+
+.hero a[href*="whatsapp"].btn,
+.hero-cta a[href*="whatsapp"],
+a[href*="whatsapp"].btn-lg,
+.whatsapp-float {
+    background: linear-gradient(135deg, #25D366 0%, #20BA5A 100%) !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35) !important;
+}
+
+.hero a[href*="whatsapp"].btn:hover,
+.hero-cta a[href*="whatsapp"]:hover,
+a[href*="whatsapp"].btn-lg:hover,
+.whatsapp-float:hover {
+    background: linear-gradient(135deg, #20BA5A 0%, #1DA851 100%) !important;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5) !important;
+}
+
+
+.hero-badge {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.15) 0%, rgba(46, 125, 210, 0.2) 100%);
+    border: 2px solid #4A90E2;
+    color: #2E7DD2;
+    box-shadow: 0 4px 12px rgba(46, 125, 210, 0.2);
+}
+
+
+
+
+.section-badge {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.15) 0%, rgba(46, 125, 210, 0.2) 100%);
+    color: #2E7DD2;
+    border: 2px solid #6BA3E8;
+}
+
+
+.stats-container {
+    border: 3px solid #4A90E2;
+}
+
+
+.stat-number {
+    color: #4A90E2;
+}
+
+
+.nav-link:hover,
+.nav-link.active {
+    color: #4A90E2;
+}
+
+.nav-link::after {
+    background-color: #4A90E2;
+}
+
+
+.hero::before {
+    background: transparent !important;
+}
+
+
+.hero h1 .highlight {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: inherit !important;
+    background-clip: unset !important;
+    color: inherit !important;
+}
